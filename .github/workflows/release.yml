@@ -26,9 +26,11 @@ jobs:
           mv mlmr12.woff2 mlmodern-regular.woff2
           mv mlmri12.woff2 mlmodern-italic.woff2
           mv mlmbx12.woff2 mlmodern-bold.woff2
+      - id: short_sha
+        run: echo "short_sha=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
       - uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ github.sha }}
+          tag_name: ${{ steps.short_sha.outputs.short_sha }}
           files: |
             mlmodern-regular.woff2
             mlmodern-italic.woff2
