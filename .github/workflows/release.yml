@@ -28,6 +28,7 @@ jobs:
           mv mlmbx12.woff2 mlmodern-bold.woff2
       - uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ github.sha }}
           files: |
             mlmodern-regular.woff2
             mlmodern-italic.woff2
