@@ -18,4 +18,4 @@ jobs:
         with:
           tag_name: ${{ steps.short_sha.outputs.short_sha }}
           files: |
-            NewCMMath-Regular.otf
+            NewCMMath-Regular.woff2
