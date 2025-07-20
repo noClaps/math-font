@@ -11,10 +11,8 @@ jobs:
       - run: brew install woff2
       - run: curl -L https://mirrors.ctan.org/fonts/newcomputermodern/otf/NewCMMath-Regular.otf > NewCMMath-Regular.otf
       - run: woff2_compress NewCMMath-Regular.otf
-      - id: short_sha
-        run: echo "short_sha=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
       - uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ steps.short_sha.outputs.short_sha }}
+          tag_name: main
           files: |
             NewCMMath-Regular.woff2
