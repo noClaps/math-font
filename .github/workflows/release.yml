@@ -17,7 +17,7 @@ jobs:
           fontforge -lang=ff -c 'Open($1); Generate($1:r + ".otf")' mlmodern/type1/mlmri12.pfb
           fontforge -lang=ff -c 'Open($1); Generate($1:r + ".otf")' mlmodern/type1/mlmbx12.pfb
       - run: |
-          mv mlmodern/type1/mlmr12.pfb mlmodern/type1/mlmri12.pfb mlmodern/type1/mlmbx12.pfb .
+          mv mlmodern/type1/mlmr12.otf mlmodern/type1/mlmri12.otf mlmodern/type1/mlmbx12.otf .
       - run: |
           woff2_compress mlmr12.otf
           woff2_compress mlmri12.otf
